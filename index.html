@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporación L&E SAC - Agua Mineral</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0f7fa 0%, #b2ebf2 25%, #81d4fa 50%, #ffe082 75%, #fffde4 100%);
+            transition: background 1s;
+        }
+        section, header, nav, footer {
+            animation: fadeInUp 1s ease;
+        }
+        .brand-img, .about-img, .org-img, .testimonio-img, .footer-img {
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 153, 204, 0.15);
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 180px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .brand-img:hover, .about-img:hover, .org-img:hover, .testimonio-img:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        @media (max-width: 700px) {
+            .about-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        /* Media Queries para diseño responsivo */
+        @media (max-width: 900px) {
+            .brand-list, .testimonios-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .container, section, nav, footer {
+                padding: 1rem;
+            }
+            .organigrama {
+                font-size: 0.98rem;
+            }
+            .video-container iframe {
+                width: 100%;
+                height: 220px;
+            }
+        }
+
+        /* Flexbox y Grid para estructura moderna */
+        .brand-list, .testimonios-list {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .organigrama ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Presentación clara y profesional */
+        section, header, nav, footer {
+            animation: fadeInUp 1s ease;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .tabla-productos {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px #81d4fa33;
+            font-size: 1rem;
+        }
+        .tabla-productos th, .tabla-productos td {
+            border: 1px solid #b2ebf2;
+            padding: 0.7rem 0.5rem;
+            text-align: center;
+        }
+        .tabla-productos th {
+            background: linear-gradient(90deg, #d4fc79 0%, #96e6a1 100%);
+            color: #009688;
+            font-weight: bold;
+        }
+        .tabla-productos tr:nth-child(even) {
+            background: #e0f7fa;
+        }
+        .tabla-productos tr:hover {
+            background: #b2ebf2;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+    <div class="bubble bubble5"></div>
+    <div class="container">
+        <img src="assets/logo.png" alt="Logo Corporación L&E SAC" class="logo" style="width:500px; margin-bottom:1rem;">
+        <h1>AGUA VIP FRESH</h1>
+        <p>¡No tomes cualquier agua, toma la mejor!
+            El agua que tu cuerpo pide, Agua Fresh.
+        Disfruta de la pureza que viene de la naturaleza.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <img src="assets/facebook.png" alt="Facebook" style="width:28px; margin-right:8px;">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="assets/instagram.png" alt="Instagram" style="width:28px; margin-right:8px;">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" title="tiktok">
+                <img src="assets/tiktok.png" alt="tiktok" style="width:28px;">
+            </a>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#marcas">Nuestras Marcas</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#mision">Misión y Visión</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <section id="marcas">
+        <h2>Nuestras Marcas</h2>
+        <div class="brand-list">
+            <div class="brand">
+                <img src="assets/agua-fresh.png" alt="Agua Fresh" class="brand-img">
+                <h3>Agua Fresh</h3>
+                <p>Refrescante y pura, ideal para tu día a día.</p>
+            </div>
+            <div class="brand">
+                <img src="assets/san-gregorio.png" alt="San Gregorio" class="brand-img">
+                <h3>San Gregorio</h3>
+                <p>Agua mineral natural, cuidando tu salud.</p>
+            </div>
+            <div class="brand">
+                <img src="assets/agua-crush.png" alt="Agua Crush" class="brand-img">
+                <h3>Agua Crush</h3>
+                <p>La energía y frescura que necesitas.</p>
+            </div>
+        </div>
+    </section>
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <div class="about-container">
+            <img src="assets/planta.jpg" alt="Planta de Agua Mineral" class="about-img">
+            <p>
+                Corporación L&E SAC es una empresa peruana ubicada en el departamento de Cajamarca, provincia de San Miguel, distrito de San Gregorio, centro poblado Casa Blanca, dedicada a la producción y distribución de agua mineral de alta calidad. Nuestro compromiso es brindar productos saludables y refrescantes para todos nuestros clientes, garantizando procesos responsables y sostenibles.
+            </p>
+        </div>
+    </section>
+    <section id="valores">
+        <h2>Valores</h2>
+        <ul class="valores-list">
+            <li>Calidad</li>
+            <li>Integridad</li>
+            <li>Responsabilidad</li>
+            <li>Respeto por el medio ambiente</li>
+            <li>Compromiso social</li>
+        </ul>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Correo:</strong> aguavipfreshperu@hotmail.com</p>
+            <p><strong>Teléfono:</strong> +51 953473660</p>
+            <p>
+                <a href="https://wa.me/51953473660" target="_blank">WhatsApp</a>
+                |
+                <a href="mailto:aguavipfreshperu@hotmail.com">Enviar correo</a>
+            </p>
+        </div>
+        <div class="map-container">
+            <h3>Ubicación</h3>
+            <iframe
+                src="https://www.google.com/maps?q=San+Gregorio,+San+Miguel,+Cajamarca,+Peru&output=embed"
+                width="100%" height="250" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonios-list">
+            <div class="testimonio">
+                <img src="assets/cliente1.png" alt="Cliente Satisfecho" class="testimonio-img">
+                <p>"El agua Fresh es la mejor opción para mi familia, siempre pura y deliciosa."</p>
+                <span>- Cliente Satisfecho</span>
+            </div>
+            <div class="testimonio">
+                <img src="assets/cliente2.png" alt="Cliente Corporativo" class="testimonio-img">
+                <p>"San Gregorio me da confianza por su origen natural y compromiso ambiental."</p>
+                <span>- Cliente Corporativo</span>
+            </div>
+        </div>
+    </section>
+    <section id="video-publicidad">
+        <h2>Proceso de Embasado</h2>
+        <p>Conoce cómo garantizamos la calidad y pureza de nuestro agua mineral a través de nuestro proceso de embasado.</p>
+        <div class="video-container" style="text-align:center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iHL7TB1mUC8"
+                title="Proceso de Embasado de Agua Mineral" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <section id="agua-fresh-info">
+        <h2>Agua Fresh</h2>
+        <p>
+            Agua Fresh es una empresa dedicada a la distribución de agua mineral en bidones de 20 litros. Actualmente opera en la región de Cajamarca, Perú, con planes de expandirse a nivel nacional. Su sede se encuentra en San Gregorio, Cajamarca.
+        </p>
+        <div class="mision-vision">
+            <div class="vision">
+                <h3>Visión</h3>
+                <p>
+                    Ser el distribuidor líder y de mayor confianza de agua mineral en bidones de 20 litros en la región de Cajamarca, con una expansión progresiva a nivel nacional. La empresa busca ser reconocida por su excelencia operativa, calidad, responsabilidad ambiental y contribución al desarrollo de sus comunidades.
+                </p>
+            </div>
+            <div class="mision">
+                <h3>Misión</h3>
+                <p>
+                    Refrescar la vida de hogares, tiendas y empresas en la región de Cajamarca y, próximamente, en todo el Perú. Esto se logra ofreciendo agua mineral de alta calidad y pureza, distribuida de manera eficiente y sostenible para garantizar el acceso a una hidratación saludable.
+                </p>
+            </div>
+        </div>
+        <h3>Organigrama de Agua Fresh</h3>
+        <ul class="organigrama">
+            <li>
+                <strong>Gerencia General</strong>
+                <ul>
+                    <li>
+                        <img src="assets/saulo.png" alt="Saulo Liza Espinoza" class="org-img">
+                        Gerente General: Saulo Liza Espinoza
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Área de Administración y Finanzas</strong>
+                <ul>
+                    <li>
+                        <img src="assets/alberto.png" alt="Alberto Santa Cruz Reyes" class="org-img">
+                        Jefe de Administración y Finanzas: Alberto Santa Cruz Reyes
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Área de Operaciones</strong>
+                <ul>
+                    <li>
+                        <img src="assets/carlos.png" alt="Carlos Ríos" class="org-img">
+                        Jefe de Operaciones: Carlos Ríos
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Área de Ventas y Marketing</strong>
+                <ul>
+                    <li>
+                        <img src="assets/sofia.png" alt="Sofía Mendoza" class="org-img">
+                        Jefe de Ventas y Marketing: Sofía Mendoza
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section id="tabla-productos">
+        <h2>Presentación y Precios de Agua Mineral</h2>
+        <table class="tabla-productos">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Presentación</th>
+                    <th>Precio (S/.)</th>
+                    <th>Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agua Fresh</td>
+                    <td>Bidón 20 litros</td>
+                    <td>15.00</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Fresh</td>
+                    <td>Botella 650 ml</td>
+                    <td>2.50</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Fresh</td>
+                    <td>Botella 3 litros</td>
+                    <td>6.00</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Fresh</td>
+                    <td>Botella 7 litros</td>
+                    <td>10.00</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>San Gregorio</td>
+                    <td>Bidón 20 litros</td>
+                    <td>16.00</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>San Gregorio</td>
+                    <td>Botella 650 ml</td>
+                    <td>2.80</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>San Gregorio</td>
+                    <td>Botella 3 litros</td>
+                    <td>6.50</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>San Gregorio</td>
+                    <td>Botella 7 litros</td>
+                    <td>10.50</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Crush</td>
+                    <td>Bidón 20 litros</td>
+                    <td>14.50</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Crush</td>
+                    <td>Botella 650 ml</td>
+                    <td>2.30</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Crush</td>
+                    <td>Botella 3 litros</td>
+                    <td>5.80</td>
+                    <td>En stock</td>
+                </tr>
+                <tr>
+                    <td>Agua Crush</td>
+                    <td>Botella 7 litros</td>
+                    <td>9.80</td>
+                    <td>En stock</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 Corporación L&E SAC. Todos los derechos reservados.</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.png" alt="Facebook" style="width:32px;"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.png" alt="Instagram" style="width:32px;"></a>
+        <a href="https://www.tiktok.com/" target="_blank"><img src="assets/tiktok.png" alt="TikTok" style="width:32px;"></a>
+    </div>
+    <img src="assets/footer-water.png" alt="Agua San Gregorio Fresh" class="footer-img">
+</footer>
+<script src="scripts/main.js"></script>
+</body>
+</html>
