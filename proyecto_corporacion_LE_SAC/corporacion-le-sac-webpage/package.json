@@ -1,0 +1,23 @@
+{
+  "name": "corporacion-le-sac-webpage",
+  "version": "1.0.0",
+  "description": "Webpage for Corporación L&E SAC, featuring mineral water brands Agua Fresh, San Gregorio, and Agua Crush.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "mineral water",
+    "Agua Fresh",
+    "San Gregorio",
+    "Agua Crush",
+    "corporation"
+  ],
+  "author": "Corporación L&E SAC",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
